@@ -1,0 +1,40 @@
+<form [formGroup]="formCliente" (ngSubmit)="onSubmit()"> 
+<div>
+    <label for="nome">Nome</label>
+    <input type="text" name="name" id="nome" formControlName="nome">
+</div>
+    
+<div>
+    <label for="tipo">tipo</label>
+    <select name="tipo" id="tipo" formControlName="tipo">
+        <option value="1">Pessoa Fisica</option>
+        <option value="2">Pessoa Juridica</option>
+    </select>
+</div>
+<div>
+    <label for="genero">Genero</label>
+    <input type="radio" name="genero" id="masculino" [value]="1" formControlName="genero">
+    <label for="masculino">masculino</label>
+    <input type="radio" name="genero" id="feminino" [value]="2" formControlName="genero">
+    <label for="feminino">feminino</label>
+</div>
+
+<div>
+    <label for="dataNascimento">Data de nascimento</label>
+    <input type="date" name="dataNascimento" id="dataNascimento" formControlName="dataNascimento">
+</div>
+
+<div>
+    <label for="observacao">Observação</label>
+    <textarea name="observacao" id="observacao" cols="30" rows="3" formControlName="observacao"></textarea>
+</div>
+
+<div>
+    <input type="checkbox" name="inativo" formControlName="inativo">
+    <label for="inativo">inativo</label>
+</div>
+
+<input type="submit" value="Salvar">
+<a href="#">Cancelar</a>
+
+</form>
